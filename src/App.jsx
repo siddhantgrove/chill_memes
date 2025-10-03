@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 export default function MemeBox() {
   const [currentMeme, setCurrentMeme] = useState(null);
@@ -52,7 +53,13 @@ export default function MemeBox() {
         className="px-6 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition"
       >
    Dark as fuck 😂
-      </button>
+      </button> <br />
+      
+      <button className="px-6 py-2 bg-red-500 text-white font-bold rounded-lg hover:bg-red-600 transition"
+       onClick={()=> Swal.fire("BAs kar ba dalla ab kya meme he dheka ga🤡")}>
+        CLICK For More </button>
+
+
 
       {/* Meme display area */}
       {currentMeme && (
